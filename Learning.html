@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Apple Scroll Pro System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
+            background-color:rgb(36, 35, 35)
+            color: white;
+        }
+
+        /* 🌈 TOP TYPING TEXT */
+        .top-text {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 12px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(15px);
+            font-weight: bold;
+            z-index: 1000;
+        }
+
+        /* HERO */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d") center/cover fixed;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(28, 28, 28, 0.6);
+        }
+
+        .hero h1 {
+            position: relative;
+            font-size: 50px;
+            color:white
+        }
+
+        /* SECTION */
+        section {
+            padding: 120px 10%;
+        }
+
+        /* 🧊 CARD SIDE BY SIDE */
+        .card {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 40px 0;
+            padding: 25px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(20px);
+            opacity: 0;
+            transform: translateY(80px);
+            transition: 1s ease;
+        }
+
+        .card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card img {
+            width: 500px;
+            height: 200px;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        .card h2 {
+            margin: 0;
+            color:blue;
+        }
+        .card p {
+            color:green;
+        }
+
+        /* 🏃 moving images */
+        .marquee {
+            height:300px;
+            overflow: hidden;
+            white-space: nowrap;
+            background: #f1f3f7;
+            padding: 20px 0;
+        }
+
+        .marquee-track {
+            display: inline-block;
+            animation: move 12s linear infinite;
+        }
+
+        .marquee img {
+            width: 300px;
+            height: 300px;
+            margin: 0 10px;
+            border-radius: 10px;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* MOBILE */
+        @media(max-width:768px) {
+            .card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .card img {
+                width: 100%;
+            }
+        }
+        .reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- 🧠 TOP TYPE TEXT -->
+    <div class="top-text">
+        <span id="type"></span>
+    </div>
+    <!-- HERO -->
+    <div class="hero">
+        <h1>System Build By Sothearith</h1>
+    </div>
+
+    <!-- WORD -->
+    <section>
+        <h1 style="color:blue">Instructions on using a computer</h1>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d">
+            <div>
+                <h2>Computer Sience</h2>
+                <p>Computer Science is a field of study that focuses on how computers work and how they can be used to solve problems. It
+                includes learning about programming, algorithms, data structures, databases, and computer systems. In this field,
+                students also explore how software and hardware interact, as well as advanced topics like artificial intelligence,
+                cybersecurity, and networking. Computer Science helps people develop logical thinking and problem-solving skills, which
+                are useful in many careers such as software development, data analysis, and IT engineering. Overall, Computer Science
+                plays an important role in modern technology and is the foundation of almost everything we use today, from mobile apps
+                to websites and smart devices.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4">
+            <div>
+                <h2>Computer Networking</h2>
+                <p>Computer Networking is a branch of Computer Science that focuses on how computers and devices connect and communicate
+                with each other. It explains how data is sent from one device to another through networks like the internet, Wi-Fi, or
+                local networks. In this field, students learn about important concepts such as routers, switches, IP addresses,
+                protocols, and network security. Computer networking is very important because it allows people to share information,
+                use online services, send emails, and access websites anywhere in the world. Without networking, modern communication
+                and digital systems would not be possible. Overall, Computer Networking is a key part of technology that keeps the world
+                connected and running smoothly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MOVING IMAGES -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5">
+            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d">
+            <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5">
+            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d">
+            <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5">
+            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d">
+            <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5">
+            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d">
+            <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5">
+            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d">
+            <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5">
+            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d">
+            <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5">
+            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d">
+            <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4">
+          
+        </div>
+    </div>
+
+    <!-- EXCEL -->
+    <section>
+        <h1>📊 Microsoft </h1>
+
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/f9/89/9e/f9899ec0706b4c9bdc96ebe9f7fe9bd5.jpg">
+            <div>
+                <h2>Microsolf Word</h2>
+                <p>Microsoft Word is a word processing software used to create, edit, format, and share documents such as letters, reports,
+                essays, and resumes. It is widely used in schools, offices, and businesses because it provides many useful tools like
+                spelling and grammar checking, text formatting, inserting images, tables, and saving files in different formats. Users
+                can also collaborate in real time by sharing documents online. Microsoft Word is part of the Microsoft Office suite
+                developed by Microsoft, and it is one of the most popular tools for writing and document creation in the world. Overall,
+                Microsoft Word helps people work more efficiently and present their ideas in a clear and professional way.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://i.pinimg.com/1200x/be/e9/47/bee947687b5710ff51bd4d5b704eb663.jpg">
+            <div>
+                <h2>Microsolf Excel</h2>
+                <p>Microsoft Excel is a spreadsheet software used to organize, calculate, and analyze data using rows and columns. It is
+                commonly used in schools, businesses, and finance for tasks like budgeting, accounting, data entry, and chart creation.
+                Excel includes powerful functions and formulas that help users perform automatic calculations, sort information, and
+                create visual graphs to understand data more easily. It also supports tools like pivot tables and conditional formatting
+                for advanced data analysis. Microsoft Excel is part of the Microsoft Office suite developed by Microsoft, and it is one
+                of the most important tools for managing numerical and business data. Overall, Microsoft Excel helps users work faster
+                and make better decisions based on data.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/1200x/d4/d8/cd/d4d8cd7753377fa6452bf110b9eb9d99.jpg">
+            <div>
+                <h2>Microsoft PowerPoint</h2>
+                <p>Microsoft PowerPoint is a presentation software used to create slide shows for education, business, and personal use. It
+                allows users to combine text, images, videos, animations, and charts into slides to present information in a clear and
+                attractive way. PowerPoint is widely used by students and professionals for school presentations, meetings, and training
+                sessions because it helps explain ideas visually and effectively. Users can also add transitions and design themes to
+                make presentations more engaging. Microsoft PowerPoint is part of the Microsoft Office suite developed by Microsoft, and
+                it is one of the most popular tools for communication and presentation. Overall, Microsoft PowerPoint helps people share
+                information in a simple and visually appealing format.</p>
+            </div>
+        </div>
+        <h1>Codding</h1>
+        <div class="card">
+            <img src="https://i.pinimg.com/1200x/2b/e8/bf/2be8bf97f298878db9a8b94d9802247b.jpg">
+            <div>
+                <h2>Vs Code</h2>
+                <p>Visual Studio Code (VS Code) is a lightweight and powerful code editor used by programmers to write and edit source code
+                for many programming languages such as HTML, CSS, JavaScript, Python, and more. It is popular because it is fast, easy
+                to use, and highly customizable with extensions that add extra features like debugging, live server preview, and Git
+                integration. Developers use VS Code for web development, software development, and application building because it
+                improves productivity and supports modern coding workflows. It also includes helpful tools like syntax highlighting,
+                autocomplete suggestions, and built-in terminal. Visual Studio Code is developed by Microsoft and has become one of the
+                most widely used code editors in the world.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/96/d1/cc/96d1cc416bfc7a2a0a16feb235f1defa.jpg">
+            <div>
+                <h2>Dev C++</h2>
+                <p>Dev-C++ is an integrated development environment (IDE) used for writing, compiling, and running programs in the C and
+                C++ programming languages. It is commonly used by beginners and students because it has a simple interface and is easy
+                to learn. Dev-C++ includes features such as code editing, debugging tools, and a built-in compiler, which helps users
+                quickly test and fix their programs. It is often used in schools and universities for learning basic programming
+                concepts like loops, functions, and object-oriented programming. Dev-C++ is a useful tool for anyone starting their
+                journey in programming with C and C++, helping them understand how software development works in a practical way.</p>
+            </div>
+        </div>
+        <h1>Design</h1>
+        <div class="card">
+            <img src="https://i.pinimg.com/1200x/bd/dd/2a/bddd2a086b0f4fedaf5fb5353aa70dd8.jpg">
+            <div>
+                <h2>Photoshop</h2>
+                <p>Adobe Photoshop is a powerful image editing software widely used by designers, photographers, and digital artists around
+                the world. It allows users to create, edit, and enhance photos using advanced tools such as layers, filters, brushes,
+                and color correction features. With Photoshop, people can remove unwanted objects, retouch images, design posters, and
+                even create realistic digital artwork from scratch. It supports both simple edits for beginners and highly complex
+                professional projects, making it one of the most popular tools in graphic design and creative industries.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/3b/d2/eb/3bd2eb45a82afed688f98473a0bdd9b9.jpg">
+            <div>
+                <h2>Adobe after effects</h2>
+                <p>Adobe After Effects is a professional motion graphics and visual effects software used in film production, video
+                editing, and digital animation. It allows creators to design stunning animations, add special effects, and enhance video
+                projects with advanced tools like keyframes, compositing, and 3D effects. Many YouTubers, filmmakers, and designers use
+                After Effects to create intros, cinematic scenes, and animated graphics that look highly professional. It is widely
+                known for its flexibility and powerful capabilities, making it one of the most important tools in the media and
+                entertainment industry.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/e6/b1/05/e6b105c5c055cdb831c797e45ee51bcb.jpg">
+            <div>
+                <h2>adobe illustrator</h2>
+                <p>Adobe Illustrator is a professional vector graphics design software used to create logos, icons, illustrations,
+                typography, and scalable artwork. Unlike pixel-based programs, Illustrator uses mathematical paths, which means designs
+                can be resized without losing quality. This makes it especially popular among graphic designers who need clean and
+                precise artwork for branding, posters, packaging, and digital media. It also includes powerful tools for drawing,
+                coloring, and shaping objects, allowing users to create both simple and highly detailed illustrations with full creative
+                control.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+        /* ✨ TYPEWRITER TEXT */
+        const text = "Welcome to My school and Nice to meet you in my website | Scroll to explore Word & Excel";
+        let i = 0;
+
+        function type() {
+            if (i < text.length) {
+                document.getElementById("type").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(type, 60);
+            }
+        }
+        type();
+
+        /* ✨ SCROLL REVEAL */
+        const cards = document.querySelectorAll(".card");
+
+        window.addEventListener("scroll", () => {
+            cards.forEach(c => {
+                let top = c.getBoundingClientRect().top;
+                if (top < window.innerHeight - 100) {
+                    c.classList.add("show");
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

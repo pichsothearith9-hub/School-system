@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Futurecode</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">'
+       <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        /* HERO */
+
+        .hero {
+            width: 100%;
+            height: 100vh;
+            background:
+                linear-gradient(rgba(0, 0, 0, .65),
+                    rgba(0, 0, 0, .65)),
+                url('https://i.pinimg.com/1200x/95/39/a7/9539a75cae6999cbd219029ff0ab939f.jpg');
+
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            width: 100%;
+            padding: 25px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: white;
+            font-size: 38px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #22c55e;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+        }
+
+        nav ul li {
+            color: white;
+            cursor: pointer;
+            transition: .3s;
+            font-size: 18px;
+        }
+
+        nav ul li:hover {
+            color: #22c55e;
+        }
+
+        .right-nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .phone {
+            color: white;
+            font-weight: bold;
+        }
+
+        .login {
+            color: white;
+            cursor: pointer;
+        }
+
+        .register-btn {
+            padding: 12px 24px;
+            background: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .register-btn:hover {
+            background: #22c55e;
+            color: white;
+        }
+
+        /* CONTENT */
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            width: 80%;
+        }
+
+        .content h1 {
+            font-size: 70px;
+            margin-bottom: 20px;
+            animation: fadeDown 1s ease;
+        }
+
+        .content p {
+            font-size: 22px;
+            line-height: 1.7;
+            width: 70%;
+            margin: auto;
+            margin-bottom: 30px;
+            animation: fadeUp 1.2s ease;
+        }
+
+        .btn {
+            padding: 16px 40px;
+            background: #16a34a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.08);
+            background: #15803d;
+        }
+
+        /* DOTS */
+
+        .dots {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+        }
+
+        .dot {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: white;
+            opacity: .5;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .dot.active {
+            opacity: 1;
+            background: #22c55e;
+        }
+
+        /* ANIMATION */
+
+        @keyframes fadeDown {
+
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:900px) {
+
+            nav {
+                padding: 20px;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .content h1 {
+                font-size: 42px;
+            }
+
+            .content p {
+                width: 100%;
+                font-size: 18px;
+            }
+
+            .logo {
+                font-size: 28px;
+            }
+
+            .phone {
+                display: none;
+            }
+
+        }
+        .service-card{
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    padding: 20px;
+    height: 100%;
+}
+.service-card:hover{
+    transform: translateY(-5px);
+}
+.icon-box{
+    font-size: 40px;
+    color: #0d6efd;
+    margin-bottom: 10px;
+}
+
+/* Discount Section */
+.discount-section{
+    background: #031a66;
+    color: white;
+    padding: 60px 0;
+    margin-top: 40px;
+}
+.discount-section h2{
+    font-weight: bold;
+}
+.btn-custom{
+    background: #20c997;
+    border: none;
+}
+.btn-custom:hover{
+    background: #17a589;
+}
+    </style>
+</head>
+<body>
+    <!-- HERO -->
+    <section class="hero">
+        <!-- NAVBAR -->
+        <nav>
+            <div class="logo">
+                Future<span>code</span>
+            </div>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Location</li>
+            </ul>
+            <div class="right-nav">
+                <div class="phone">
+                    +855 97-915-5789
+                </div>
+                <a href="login.html">
+                    <div class="login">
+                        Login
+                    </div>
+                </a>
+                <button class="register-btn">
+                    Register
+                </button>
+            </div>
+        </nav>
+        <!-- CONTENT -->
+        <div class="content">
+            <h1>
+                Start and Keep
+            </h1>
+            <p>
+                Learn Design, Developer, Microsoft Word,
+                Microsoft Excel, and Powerpoint UX/UI
+                skills with premium modern education system.
+            </p>
+            <button class="btn">
+                <a href="Learning.html">
+                Learn More
+                </a>
+            </button>
+        </div>
+        <div class="dots">
+
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </section>
+</body>
+</html>

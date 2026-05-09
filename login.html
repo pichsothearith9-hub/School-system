@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Login</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+        }
+
+        .container {
+            width: 400px;
+            padding: 30px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            color: white;
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-box {
+            margin-bottom: 15px;
+        }
+
+        .input-box label {
+            font-size: 14px;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .input-box input:focus {
+            transform: scale(1.03);
+            box-shadow: 0 0 10px #00c6ff;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Login Form</h2>
+
+        <div class="input-box">
+            <label>Name</label>
+            <input type="text" placeholder="Enter your name">
+        </div>
+
+        <div class="input-box">
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email">
+        </div>
+
+        <div class="input-box">
+            <label>Phone Number</label>
+            <input type="text" placeholder="Enter your phone">
+        </div>
+
+        <div class="input-box">
+            <label>PIN Code</label>
+            <input type="password" placeholder="Enter PIN code">
+        </div>
+        <a href="./for Athenden.html">
+        <button onclick="login()">Login</button>
+        </a>
+    </div>
+
+    <script>
+        function login() {
+            alert("Login Successful 🚀");
+        }
+    </script>
+
+</body>
+
+</html>

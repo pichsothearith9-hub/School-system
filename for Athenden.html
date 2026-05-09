@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futurecode</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+        body {
+            background: #f4f7fb;
+        }
+        nav {
+            background: #111827;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+        nav ul li {
+            cursor: pointer;
+            transition: .3s;
+        }
+        nav ul li:hover {
+            color: #60a5fa;
+        }
+        .hero {
+            height: 50vh;
+            background: linear-gradient(to right, #111827, #1d4ed8);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            margin-top: -60px;
+        }
+        .form-box {
+            background: white;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+            margin-bottom: 40px;
+        }
+        .form-box h2 {
+            margin-bottom: 20px;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        input,
+        select {
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid #ddd;
+            width: 100%;
+        }
+        .btn {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: .3s;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background: #1d4ed8;
+            transform: scale(1.05);
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+            transition: .3s;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+        }
+        .card i {
+            font-size: 35px;
+            color: #2563eb;
+            margin-bottom: 15px;
+        }
+        .card h2 {
+            font-size: 35px;
+        }
+        .card p {
+            color: #6b7280;
+        }
+        .table-box {
+            background: white;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+            overflow: auto;
+        }
+        .table-box h2 {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th,
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            text-align: left;
+        }
+        .status {
+            padding: 8px 14px;
+            border-radius: 30px;
+            color: white;
+            font-size: 14px;
+        }
+        .present {
+            background: #22c55e;
+        }
+        .absent {
+            background: #ef4444;
+        }
+        .dark {
+            background: #111827;
+            color: white;
+        }
+        .dark .form-box,
+        .dark .card,
+        .dark .table-box {
+            background: #1f2937;
+            color: white;
+        }
+        .dark input,
+        .dark select {
+            background: #111827;
+            color: white;
+            border: 1px solid #374151;
+        }
+        .dark th,
+        .dark td {
+            border-color: #374151;
+        }
+        .toggle {
+            cursor: pointer;
+            font-size: 22px;
+        }
+        @media(max-width:768px) {
+            .hero h1 {
+                font-size: 38px;
+            }
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            Futurecode
+        </div>
+        <ul>
+            <a href="./website.html">
+            <li>Home</li>
+            </a>
+            <a href="https://www.facebook.com/share/18BLufjG5w/?mibextid=wwXIfr">
+            <li>Contact</li>
+            </a> 
+            <a href="for Athenden.html">
+            <li>Attendance</li>
+            </a>
+            <a href="https://maps.app.goo.gl/AdFWPrB2YKSi6QGY7">
+            <li>Location</li>
+            </a>
+            <a href="./Learning.html">
+            <li>Learning</li>
+            </a>
+        </ul>
+        <div class="toggle" onclick="darkMode()">
+            <i class="fa-solid fa-moon"></i>
+        </div>
+    </nav>
+    <section class="hero">
+        <h1>Attendance Management System</h1>
+        <p>
+            Professional system for managing attendance,
+            student records, and attendance reports.
+        </p>
+    </section>
+
+    <!-- MAIN -->
+
+    <div class="container">
+
+        <!-- FORM -->
+
+        <div class="form-box">
+
+            <h2>Add Attendance</h2>
+
+            <div class="form-grid">
+
+                <input type="text" id="name" placeholder="Student Name">
+
+                <input type="text" id="id" placeholder="Student ID">
+
+                <select id="status">
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+
+                <input type="date" id="date">
+
+            </div>
+
+            <button class="btn" onclick="addAttendance()">
+                Add Attendance
+            </button>
+
+        </div>
+
+        <!-- CARDS -->
+
+        <div class="cards">
+
+            <div class="card">
+                <i class="fa-solid fa-users"></i>
+                <h2 id="totalStudents">0</h2>
+                <p>Total Students</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-user-check"></i>
+                <h2 id="presentCount">0</h2>
+                <p>Present</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-user-xmark"></i>
+                <h2 id="absentCount">0</h2>
+                <p>Absent</p>
+            </div>
+
+        </div>
+
+        <!-- TABLE -->
+
+        <div class="table-box">
+
+            <h2>Attendance List</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>ID</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+
+                <tbody id="attendanceTable">
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+    <script>
+        let total = 0;
+        let present = 0;
+        let absent = 0;
+        function addAttendance() {
+            let name = document.getElementById("name").value;
+            let id = document.getElementById("id").value;
+            let status = document.getElementById("status").value;
+            let date = document.getElementById("date").value;
+            if (name === "" || id === "" || date === "") {
+                alert("Please fill all fields");
+                return;
+            }
+            let table = document.getElementById("attendanceTable");
+            let row = table.insertRow();
+            row.innerHTML = `
+    <td>${name}</td>
+    <td>${id}</td>
+    <td>
+        <span class="status ${status === 'Present' ? 'present' : 'absent'}">
+        ${status}
+        </span>
+    </td>
+    <td>${date}</td>
+    <td>
+        <button onclick="deleteRow(this)"
+        style="background:red;color:white;border:none;padding:8px 12px;border-radius:8px;cursor:pointer;">
+        Delete
+        </button>
+    </td>
+    `;
+
+            total++;
+
+            if (status === "Present") {
+                present++;
+            } else {
+                absent++;
+            }
+
+            updateCards();
+
+            document.getElementById("name").value = "";
+            document.getElementById("id").value = "";
+            document.getElementById("date").value = "";
+
+        }
+
+        function updateCards() {
+
+            document.getElementById("totalStudents").innerText = total;
+            document.getElementById("presentCount").innerText = present;
+            document.getElementById("absentCount").innerText = absent;
+
+        }
+
+        function deleteRow(btn) {
+
+            let row = btn.parentElement.parentElement;
+
+            let statusText = row.cells[2].innerText;
+
+            if (statusText.includes("Present")) {
+                present--;
+            } else {
+                absent--;
+            }
+
+            total--;
+
+            row.remove();
+
+            updateCards();
+
+        }
+
+        // PRESET STUDENT LIST
+
+        let students = [
+            { name: "Sothearith", id: "ST001" },
+            { name: "Dara", id: "ST002" },
+            { name: "Sokha", id: "ST003" },
+            { name: "Vanna", id: "ST004" },
+            { name: "Rith", id: "ST005" },
+             { name: "Sothearith", id: "ST001" },
+            { name: "Dara", id: "ST002" },
+            { name: "Sokha", id: "ST003" },
+            { name: "Vanna", id: "ST004" },
+            { name: "Rith", id: "ST005" },
+             { name: "Sothearith", id: "ST001" },
+            { name: "Dara", id: "ST002" },
+            { name: "Sokha", id: "ST003" },
+            { name: "Vanna", id: "ST004" },
+            { name: "Rith", id: "ST005" },
+             { name: "Sothearith", id: "ST001" },
+            { name: "Dara", id: "ST002" },
+            { name: "Sokha", id: "ST003" },
+            { name: "Vanna", id: "ST004" },
+            { name: "Rith", id: "ST005" },
+        ];
+
+        window.onload = function () {
+
+            let table = document.getElementById("attendanceTable");
+
+            students.forEach(student => {
+
+                let row = table.insertRow();
+
+                row.innerHTML = `
+        <td>${student.name}</td>
+        <td>${student.id}</td>
+        <td>
+            <input type="checkbox" class="tick"
+            onchange="toggleAttendance(this)">
+        </td>
+        <td class="statusText">Absent</td>
+        <td>
+            <button onclick="deleteRow(this)"
+            style="background:red;color:white;border:none;padding:8px 12px;border-radius:8px;cursor:pointer;">
+            Delete
+            </button>
+        </td>
+        `;
+
+                total++;
+                absent++;
+
+            });
+
+            updateCards();
+
+        }
+
+        function toggleAttendance(check) {
+
+            let row = check.parentElement.parentElement;
+            let statusCell = row.querySelector(".statusText");
+
+            if (check.checked) {
+                statusCell.innerHTML = "Present ✅";
+                present++;
+                absent--;
+            } else {
+                statusCell.innerHTML = "Absent ❌";
+                present--;
+                absent++;
+            }
+
+            updateCards();
+
+        }
+
+        function darkMode() {
+            document.body.classList.toggle("dark");
+        }
+
+    </script>
+
+</body>
+
+</html>
